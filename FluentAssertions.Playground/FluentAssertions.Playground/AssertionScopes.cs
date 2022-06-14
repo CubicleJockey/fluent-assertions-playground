@@ -1,27 +1,10 @@
-using FluentAssertions.Execution;
+ï»¿using FluentAssertions.Execution;
 
 namespace FluentAssertions.Playground
 {
     [TestClass]
-    public class GettingStarted
+    public class AssertionScopes
     {
-        [TestMethod]
-        [Description("This will throw a test framework-specific exception with the following message.")]
-        public void SubjectIdentification()
-        {
-            try
-            {
-                const string user = "André Davis";
-                user.Should().Be("André Joseph Davis");
-            }
-            catch(Exception exception)
-            {
-                exception.Message
-                         .Should()
-                         .Be("Expected user to be \"André Joseph Davis\" with a length of 18, but \"André Davis\" has a length of 11, differs near \"Dav\" (index 6).");
-            }
-        }
-
         [TestMethod]
         [Description("You can batch multiple assertions into an AssertionScope so that FluentAssertions throws one exception at the end of the scope with all failures.")]
         public void AssertionScope()
