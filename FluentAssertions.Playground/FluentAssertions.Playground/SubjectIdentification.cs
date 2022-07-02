@@ -26,9 +26,9 @@ namespace FluentAssertions.Playground
         {
             const double MONEY = 121516;
             try { MONEY.Should().Be(-666); }
-            catch (Exception exepction)
+            catch (Exception exception)
             {
-                exepction.Message.Should().Contain(nameof(MONEY));
+                exception.Message.Should().Contain(nameof(MONEY));
             }
         }
     }
